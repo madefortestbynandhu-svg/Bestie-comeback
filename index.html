@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Bestie 💖</title>
+    <style>
+        body { display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background-color: #ffe4e1; font-family: sans-serif; text-align: center; overflow: hidden; }
+        .container { background: white; padding: 2rem; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 85%; max-width: 400px; }
+        h1 { color: #ff4d6d; font-size: 1.4rem; line-height: 1.4; }
+        .btn-wrapper { 
+            margin-top: 30px; 
+            display: flex; 
+            justify-content: space-around; 
+            align-items: center; 
+            min-height: 100px; 
+            position: relative; 
+        }
+        button { padding: 12px 25px; font-size: 1rem; border: none; border-radius: 50px; cursor: pointer; font-weight: bold; touch-action: manipulation; }
+        #yesBtn { background-color: #ff4d6d; color: white; }
+        #noBtn { 
+            background-color: #ddd; 
+            color: #777; 
+            position: relative; 
+            transition: 0.1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="mainContainer">
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHpueG56Znd4ZzR6ZzR6ZzR6ZzR6ZzR6ZzR6ZzR6ZzR6ZzR6JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1z/3oriO0OEd9QIDdllqo/giphy.gif" width="100">
+        <h1>Please forget the ego and comeback? 🥺</h1>
+        <div class="btn-wrapper">
+            <button id="yesBtn" onclick="showLove()">Okay! ✨</button>
+            <button id="noBtn" onmouseover="moveButton()" onclick="moveButton()" ontouchstart="moveButton()">No</button>
+        </div>
+    </div>
+
+    <div class="container" id="successContainer" style="display:none;">
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3R6Z3R6Z3R6Z3R6Z3R6Z3R6Z3R6Z3R6Z3R6Z3R6Z3R6JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/lTQF0ODLLJHza/giphy.gif" width="120">
+        <h2>YAY! I missed you! 💖</h2>
+        <p>Text me right now!</p>
+    </div>
+
+    <script>
+        function moveButton() {
+            const btn = document.getElementById('noBtn');
+            btn.style.position = 'fixed'; 
+            const x = Math.random() * (window.innerWidth - btn.offsetWidth - 30);
+            const y = Math.random() * (window.innerHeight - btn.offsetHeight - 30);
+            btn.style.left = x + 'px';
+            btn.style.top = y + 'px';
+        }
+        function showLove() {
+            document.getElementById('mainContainer').style.display = 'none';
+            document.getElementById('successContainer').style.display = 'block';
+        }
+    </script>
+</body>
+          </html>
+          
